@@ -15,6 +15,7 @@ auto main() -> int {
   std::cout << "This test 1:\n";
   AVLtree tree1;
   tree1.insert_item(42);
+  tree1.insert_item(42);
   tree1.insert_item(18);
   std::cout << "try to insert_item:\n";
   tree1.insert_item(22);
@@ -31,11 +32,15 @@ auto main() -> int {
   tree1.inorder_traversal();
   std::cout << "totally " << tree1.size() << "items:\n";
   std::cout << "This layer traversal:\n";
+  std::cout << "The min element is :" << tree1.min_elemet() << std::endl;
+  std::cout << "The max element is :" << tree1.max_elemet() << std::endl;
+
   tree1.order_level_traversal();
   tree1.clear();
 
+
   std::cout << "This test 2:\n";
-  AVLtree tree2{42, 18, 22, 9, 21, 6, 8, 20, 63, 50, 62, 51};
+  AVLtree tree2{42, 42, 18, 22, 9, 21, 6, 8, 20, 63, 50, 62, 51};
   std::cout << "let us see what it contains:\n";
   tree2.inorder_traversal();
   std::cout << "totally " << tree2.size() << " items:\n";

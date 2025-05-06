@@ -48,8 +48,8 @@ const int &AVLtree::find_max(const unique_ptr<TreeNode> &node) const noexcept {
 const int &AVLtree::find_min(const unique_ptr<TreeNode> &node) const noexcept {
   TreeNode *tmp = node.get();
   if (tmp) {
-    while (tmp->right) {
-      tmp = tmp->right.get();
+    while (tmp->left) {
+      tmp = tmp->left.get();
     }
   }
   return tmp->value;
